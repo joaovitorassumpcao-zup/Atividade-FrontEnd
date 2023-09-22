@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/api/zupescola")
+@RequestMapping(path = "/api/zupescolafull/professor")
 public class ProfessorController {
     @Autowired
     ProfessorService professorService;
@@ -21,21 +21,23 @@ public class ProfessorController {
     ProfessorMapper professorMapper;
 
     //Endpoint de cadastro do professor (post)
-    @PostMapping(path = "/cadastraprofessor")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    @CrossOrigin(origins = "http://127.0.0.1:5500/")
     public ResponseEntity<ProfessorDTO> cadastraProfessor(@RequestBody Professor professor) {
         Professor novoProfessor = professorService.cadastrarProfessor(professor);
         return new ResponseEntity<>(professorMapper.toDto(professor), HttpStatus.CREATED);
     }
 
     //Endpoint apaga professor (delete)
-    @DeleteMapping(path = "deleteprofessor/{id}")
+    @DeleteMapping(path = "/{id}")
     public void detelaProfessor(@PathVariable Long id) {
         professorService.deletar(id);
     }
 
     //Endpoint para listar todos professoress (get)
-    @GetMapping(path = "/professores")
+    @GetMapping
+    @CrossOrigin(origins = "http://127.0.0.1:5500/")
     public List<Professor> buscaTodosProfessores() {
         return professorService.buscarTodos();
     }

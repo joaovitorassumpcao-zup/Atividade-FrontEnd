@@ -1,11 +1,13 @@
 package com.EscolaZup.service;
 
 import com.EscolaZup.model.Matricula;
+import com.EscolaZup.model.Professor;
 import com.EscolaZup.repository.MatriculaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -43,5 +45,10 @@ public class MatriculaService {
     //Método que pesquisa por aluno na base
     public Optional<Matricula> buscaAlunoId(Long alunoid) {
         return matriculaRepository.findById(alunoid);
+    }
+
+    //Método que lista todas as matrículas da DB
+    public List<Matricula> buscarTodos() {
+        return matriculaRepository.findAll();
     }
 }

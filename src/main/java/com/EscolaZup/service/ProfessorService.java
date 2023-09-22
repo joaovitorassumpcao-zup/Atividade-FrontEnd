@@ -32,7 +32,7 @@ public class ProfessorService {
         professorRepository.deleteById(id);
     }
 
-    //Método que lista todos alunos da DB
+    //Método que lista todos professores da DB
     public List<Professor> buscarTodos() {
         return professorRepository.findAll();
     }

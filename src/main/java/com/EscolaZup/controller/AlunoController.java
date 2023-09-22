@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(path = "/api/zupescola")
+@RequestMapping(path = "/api/zupescolafull/aluno")
 public class AlunoController {
     @Autowired
     AlunoService alunoService;
@@ -21,21 +21,23 @@ public class AlunoController {
     AlunoMapper alunoMapper;
 
     //Endpoint de cadastro de aluno (post)
-    @PostMapping(path = "/cadastraaluno")
+    @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
+    @CrossOrigin(origins = "http://127.0.0.1:5500/")
     public ResponseEntity<AlunoDTO> cadastraAluno(@RequestBody Aluno aluno) {
         Aluno novoAluno = alunoService.cadastraAluno(aluno);
         return new ResponseEntity<>(alunoMapper.toDto(aluno), HttpStatus.CREATED);
     }
 
     //Endpoint para apagar aluno (delete)
-    @DeleteMapping(path = "deletealuno/{id}")
+    @DeleteMapping(path = "/{id}")
     public void detelaAluno(@PathVariable Long id) {
         alunoService.deletar(id);
     }
 
     //Endpoint para listar todos alunos (get)
-    @GetMapping(path = "/alunos")
+    @GetMapping
+    @CrossOrigin(origins = "http://127.0.0.1:5500/")
     public List<Aluno> buscaTodosAlunos() {
         return alunoService.buscarTodos();
     }
