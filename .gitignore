@@ -9,8 +9,6 @@ target/
 .mvn
 mvnw
 mvnw.cmd
-data
-frontend
 
 ### STS ###
 .apt_generated
