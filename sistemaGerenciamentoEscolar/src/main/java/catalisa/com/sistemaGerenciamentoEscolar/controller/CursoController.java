@@ -22,8 +22,9 @@ import java.util.stream.Collectors;
 public class CursoController {
     @Autowired
     private CursoService cursoService;
+    @CrossOrigin(origins = "http://127.0.0.1.5500")
 
-
+@GetMapping
     public ResponseEntity<List<CursoDTO>> listarTodosCursos(){
         List<Curso> cursos = cursoService.listarTodosCursos();
         List<CursoDTO> listaDTO = cursos.stream().map(CursoDTO::new).collect(Collectors.toList());
@@ -34,6 +35,8 @@ public class CursoController {
         Curso curso = cursoService.buscarCursoPorId(id);
         return  ResponseEntity.ok().body(new CursoDTO(curso));
     }
+    @CrossOrigin(origins = "http://127.0.0.1.5500")
+
     @PostMapping("/cadastrar")
     public ResponseEntity<CursoDTO> cadastrarCurso(@RequestBody Curso curso){
         curso = cursoService.cadastrarCurso(curso);

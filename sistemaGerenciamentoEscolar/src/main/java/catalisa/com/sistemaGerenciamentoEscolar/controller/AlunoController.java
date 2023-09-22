@@ -19,7 +19,9 @@ import java.util.stream.Collectors;
 public class AlunoController {
     @Autowired
     private AlunoService alunoService;
-@GetMapping
+@CrossOrigin(origins = "http://127.0.0.1.5500")
+
+    @GetMapping
 
     public ResponseEntity<List<AlunoDTO>> listarTodosAlunos(){
     List<Aluno> alunos = alunoService.listarTodosAlunos();
@@ -31,12 +33,15 @@ public ResponseEntity<AlunoDTO> buscarAlunoPorId(@PathVariable Long id){
     Aluno aluno = alunoService.buscarAlunoPorId(id);
     return  ResponseEntity.ok().body(new AlunoDTO(aluno));
 }
+    @CrossOrigin(origins = "http://127.0.0.1.5500")
+
 @PostMapping("/cadastrar")
     public ResponseEntity<AlunoDTO> cadastrarAluno(@RequestBody Aluno aluno){
     aluno = alunoService.cadastrarAluno(aluno);
     URI uri = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}").buildAndExpand(aluno.getId()).toUri();
    return ResponseEntity.created(uri).body(new AlunoDTO(aluno));
 }
+
 @DeleteMapping("/deletar/{id}")
     public ResponseEntity<Void> deletarAlunoPorId(@PathVariable Long id){
     alunoService.deletarAlunoPorId(id);

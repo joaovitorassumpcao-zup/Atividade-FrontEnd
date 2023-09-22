@@ -18,8 +18,8 @@ import java.util.stream.Collectors;
 public class ProfessorController {
     @Autowired
     private ProfessorService professorService;
-
-
+    @CrossOrigin(origins = "http://127.0.0.1.5500")
+    @GetMapping
     public ResponseEntity<List<ProfessorDTO>> listarTodosProfessores(){
         List<Professor> professores = professorService.listarTodosProfessores();
         List<ProfessorDTO> listaDTO = professores.stream().map(ProfessorDTO::new).collect(Collectors.toList());
@@ -31,6 +31,9 @@ public class ProfessorController {
 
         return  ResponseEntity.ok().body(new ProfessorDTO(professor));
     }
+
+    @CrossOrigin(origins = "http://127.0.0.1.5500")
+
     @PostMapping("/cadastrar")
     public ResponseEntity<ProfessorDTO> cadastrarProfessor(@RequestBody Professor professor){
         professor = professorService.cadastrarProfessor(professor);
