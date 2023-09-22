@@ -11,9 +11,8 @@ import java.util.UUID;
  * DTO for {@link org.escola.gerenciador.model.entity.Aluno}
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record AlunoDTO(@NotNull @NotEmpty @NotBlank String nome, int idade,
-                       @NotNull @Size(min = 5, max = 260) @Email @NotEmpty @NotBlank String email,
-                       @NotNull MatriculaDTO matricula) implements Serializable {
+public record AlunoDTO(@NotNull MatriculaDTO matricula,
+                       @NotNull UsuarioDTO usuarioDTO) implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 }

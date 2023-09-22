@@ -13,8 +13,8 @@ import java.math.BigDecimal;
  * DTO for {@link org.escola.gerenciador.model.entity.Professor}
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record ProfessorDTO(@NotNull @NotEmpty @NotBlank String nome, @NotNull Integer idade,
-                           @NotNull BigDecimal salario, CursoDTO cursoDTO) implements Serializable {
+public record ProfessorDTO(@NotNull BigDecimal salario, CursoDTO cursoDTO,
+                           @NotNull UsuarioDTO usuarioDTO) implements Serializable {
     @Serial
     private static final long serialVersionUID = 1L;
 }

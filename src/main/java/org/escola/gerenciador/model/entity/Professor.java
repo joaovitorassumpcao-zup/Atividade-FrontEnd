@@ -26,6 +26,9 @@ public class Professor implements Serializable {
     @Column(length = 3, nullable = false)
     private Integer idade;
 
+    @Column(nullable = false, unique = true)
+    private String email;
+
     @Column(nullable = false)
     private BigDecimal salario;
 
