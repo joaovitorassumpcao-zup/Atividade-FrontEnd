@@ -1,0 +1,29 @@
+<!-- cadastro de matriculas - INÍCIO -->
+<div id="cadastro">
+    <h3>Cadastrar aluno</h3>
+    <form id="cadastromatriculas" onsubmit="cadastraMatricula(event)">
+
+        <div id="alunoMatricula">
+            <label>Lista de alunos</label>
+            <select id="alunomatriculalista">
+            </select>
+        </div>
+
+        <div id="cursoMatricula">
+            <label>Lista de cursos</label>
+            <select id="cursomatriculalista">
+            </select>
+        </div>
+
+        
+        <div class="cadastrar">
+            <input type="submit" value="cadastrar" onclick="mensagem()"  class="btn btn-primary" style="background-color: rgb(234, 121, 202) !important; border: 0;">
+        </div>
+       
+    </form>
+
+    <div id="msgsucesso" style="display: none;">
+        Cadastro concluído com sucesso!
+      </div>
+    </div>
+    <!-- cadastro de professores - FIM -->

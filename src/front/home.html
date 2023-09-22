@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Escola Zup</title>
+</head>
+<body>
+    <div class="back">
+        <div class="div-center" style="width: 500px; margin-top: 30px;">
+            <div class="content" style="vertical-align:text-top;">
+               <!-- conteúdo principal - INÍCIO-->
+               
+    <h1>Escola Zup</h1>
+    <ul class="list-group list-group-horizontal" style="margin-bottom: 50px;">
+        <li class="list-group-item"><a href="/home.html" class="link-primary" style="text-decoration: none;">home</a></li>
+        <li class="list-group-item"><a href="?pg=aluno" class="link-primary" style="text-decoration: none;">aluno</a></li>
+        <li class="list-group-item"><a href="?pg=professor" class="link-primary" style="text-decoration: none;">professor</a></li>
+        <li class="list-group-item"><a href="?pg=curso" class="link-primary" style="text-decoration: none;">curso</a></li>
+        <li class="list-group-item"><a href="?pg=matricula" class="link-primary" style="text-decoration: none;">matricula</a></li>
+        <li class="list-group-item"><a href="/index.html" class="link-danger" style="text-decoration: none;">sair</a></li>
+    </ul>
+    <div id="principal">
+    <script src="/js/includefiles.js"></script>    
+    <script>
+            //Pegando infos da url
+            const url = new URLSearchParams(window.location.search);
+            const paginaId = url.get('pg');
+            const paginaAction = url.get('action');
+            
+            
+            switch(paginaId) {
+                case 'aluno':
+                    includeFiles('../html/aluno.html','principal');
+                    
+                    if (paginaAction == 'cadastro'){
+                        includeFiles('../form/alunocadastro.html','secundaria');
+                    }else if (paginaAction == 'lista') {
+                        includeFiles('../form/alunolista.html','secundaria');
+                    }
+                    break;
+                case 'professor':
+                    includeFiles('../html/professor.html','principal');
+
+                    if (paginaAction == 'cadastro'){
+                        includeFiles('../form/professorcadastro.html','secundaria');
+                    }else if (paginaAction == 'lista') {
+                        includeFiles('../form/professorlista.html','secundaria');
+                    }
+                    break;
+                case 'curso':
+                    includeFiles('../html/curso.html','principal');
+
+                    if (paginaAction == 'cadastro'){
+                        includeFiles('../form/cursocadastro.html','secundaria');
+                    }else if (paginaAction == 'lista') {
+                        includeFiles('../form/cursolista.html','secundaria');
+                    }
+                    break;
+                case 'matricula':
+                    includeFiles('../html/matricula.html','principal');
+
+                    if (paginaAction == 'cadastro'){
+                        includeFiles('../form/matriculacadastro.html','secundaria');
+                    }else if (paginaAction == 'lista') {
+                        includeFiles('../form/matriculalista.html','secundaria');
+                    }
+                    break;
+                default:  
+                    document.write('Seja bem-vinde ao sistema de gestão da nossa escola!');
+            }
+        </script>
+    </div> 
+   <div id="secundaria">
+       
+    </div>
+    <script src="js/lista.js"></script>
+    <script src="js/cadastro.js"></script>
+               <!-- conteúdo principal - FIM-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

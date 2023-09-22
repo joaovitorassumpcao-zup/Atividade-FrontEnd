@@ -1,0 +1,25 @@
+<!-- cadastro de curso - INÍCIO -->
+<div id="cadastro">
+    <h3>Cadastrar curso</h3>
+    <form id="cadastrocurso" onsubmit="cadastraCurso(event)">
+        <div class="nome">
+            <label for="nome">Nome do curso</label>
+            <input type="text" name="nome" id="nome" required>
+        </div>
+        
+        <div class="idade">
+            <label for="cargahoraria">Carga horaria</label>
+            <input type="text" name="cargahoraria" id="cargahoraria" required>
+        </div>
+        
+        <div class="cadastrar">
+            <input type="submit" value="cadastrar" onclick="mensagem()"  class="btn btn-primary" style="background-color: rgb(234, 121, 202) !important; border: 0;">
+        </div>
+       
+    </form>
+
+    <div id="msgsucesso" style="display: none;">
+        Cadastro concluído com sucesso!
+      </div>
+    </div>
+<!-- cadastro de curso - FIM -->

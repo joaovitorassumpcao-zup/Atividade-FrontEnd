@@ -1,0 +1,30 @@
+<!-- cadastro de alunos - INÍCIO -->
+<div id="cadastro">
+    <h3>Cadastrar aluno</h3>
+    <form id="cadastroaluno" onsubmit="cadastraAluno(event)">
+        <div class="nome">
+            <label for="nome">Nome do aluno</label>
+            <input type="text" name="nome" id="nome" required>
+        </div>
+        
+        <div class="idade">
+            <label for="idade">Idade do aluno</label>
+            <input type="text" name="idade" id="idade" required>
+        </div>
+
+        <div class="email">
+            <label for="email">E-mail do aluno</label>
+            <input type="text" name="email" id="email" required>
+        </div>
+        
+        <div class="cadastrar">
+            <input type="submit" value="cadastrar" onclick="mensagem()"  class="btn btn-primary" style="background-color: rgb(234, 121, 202) !important; border: 0;">
+        </div>
+       
+    </form>
+
+    <div id="msgsucesso" style="display: none;">
+        Cadastro concluído com sucesso!
+      </div>
+    </div>
+    <!-- cadastro de alunos - FIM -->

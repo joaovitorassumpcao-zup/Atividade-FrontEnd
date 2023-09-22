@@ -1,0 +1,36 @@
+<!-- cadastro de professores - INÍCIO -->
+<div id="cadastro">
+    <h3>Cadastrar aluno</h3>
+    <form id="cadastroprofessor" onsubmit="cadastraProfessor(event)">
+        <div class="nome">
+            <label for="nome">Nome do professor</label>
+            <input type="text" name="nome" id="nome" required>
+        </div>
+        
+        <div class="idade">
+            <label for="idade">Idade do professor</label>
+            <input type="text" name="idade" id="idade" required>
+        </div>
+
+        <div id="cursoProfessor">
+            <label>Curso que ministra</label>
+            <select id="cursoprofessorlista">
+            </select>
+        </div>
+
+        <div class="salario">
+            <label for="salario">Salário do professor</label>
+            <input type="text" name="salario" id="salario" required>
+        </div>
+        
+        <div class="cadastrar">
+            <input type="submit" value="cadastrar" onclick="mensagem()"  class="btn btn-primary" style="background-color: rgb(234, 121, 202) !important; border: 0;">
+        </div>
+       
+    </form>
+
+    <div id="msgsucesso" style="display: none;">
+        Cadastro concluído com sucesso!
+      </div>
+    </div>
+    <!-- cadastro de professores - FIM -->
