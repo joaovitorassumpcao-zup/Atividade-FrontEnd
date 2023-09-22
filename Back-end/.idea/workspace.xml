@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d793b07f-d92b-4f23-91c2-8ffb4c19e400" name="Changes" comment="" />
+    <list default="true" id="d793b07f-d92b-4f23-91c2-8ffb4c19e400" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/iSchool-API" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/controller/AlunoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/controller/AlunoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/controller/CursoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/controller/CursoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/controller/MatriculaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/controller/MatriculaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/controller/ProfessorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/controller/ProfessorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/model/dto/AlunoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/model/dto/AlunoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/model/dto/CursoDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/model/dto/CursoDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/model/dto/MatriculaDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/model/dto/MatriculaDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/model/dto/ProfessorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/model/dto/ProfessorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/service/AlunoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/service/AlunoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/service/CursoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/service/CursoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/service/ProfessorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/src/main/java/com/catalisa/iSchool/service/ProfessorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iSchool-API/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/iSchool-API/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +28,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
@@ -20,10 +38,10 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 2
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 2
+}</component>
   <component name="ProjectId" id="2Vkwx6CIkFSu5tZc7sfe4SVghHW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -33,7 +51,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/mikael.gualdi/Documents/Projetos Java/GerenciamentoEscolarFullStack/Atividade-FrontEnd/Back-end/iSchool-API",
+    "last_opened_file_path": "C:/Users/mikael.gualdi/Documents/Projetos Java/GerenciamentoEscolarFullStack/Atividade-FrontEnd",
     "settings.editor.selected.configurable": "aws"
   }
 }]]></component>
