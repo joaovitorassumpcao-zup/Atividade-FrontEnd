@@ -1,0 +1,7 @@
+Minha lógica é que várias matrículas terá um aluno e várias matrículas  terá um curso.
+ vários professores terá um curso.
+
+Minha ideia é que através do cadastro de um curso, as tabelas que referenciam ele automaticamente sejam atualizadas. 
+O mesmo para os outros. 
+Gostei muito desses exercício porque aprendi usar DTO de verdade e me aprofundei um pouco mais na parte funcional dos maps. 
+Ainda tenho um pouco de dúvidas nas tabelas, mas pelo menos consigo agora cadastrar várias tabelas sem ter dificuldade de entrega. 
