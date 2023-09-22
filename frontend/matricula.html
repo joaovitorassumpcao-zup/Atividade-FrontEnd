@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Matrículas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Gerenciamento de Matrículas</h1>
+    <h3>Fazer uma nova matrícula</h3>
+    <div class="col-3">
+        <form id="formulario_cadastro_matricula">
+            <div class="col">
+                <label for="dataMatricula">Data da matrícula: </label>
+                <input type="text" name="dataMatricula" id="dataMatricula" class="form-control">        
+            </div>
+        
+            <div class="col">    
+                <label for="alunosId">ID do Alune: </label>
+                <input type="text" name="alunosId" id="alunosId" class="form-control">
+            </div>
+            <div class="col">    
+                <label for="cursosId">ID do curso: </label>
+                <input type="text" name="cursosId" id="cursosId" class="form-control">
+            </div>
+            <div class="mt-3 mb-3">
+                <button id="btn_cadastro_matricula" type="submit" onclick="mensagemSucesso()" class="btn btn-outline-dark">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+        <div class="mt-5 col-md-12">
+            <h3>Lista de todas as matrículas</h3>
+    
+            <table id="table_matriculas" class="table table-hover" style="width: 100%">
+                <thead>
+                    <tr>
+                        <th>ID da matrícula</th>
+                        <th>ID do alune</th>
+                        <th>ID do curso</th>
+                    </tr>
+                </thead>
+    
+                <tbody id="lista_matriculas">
+                </tbody>
+    
+            </table>
+        </div>
+        <p><a href="/home.html">Voltar para home</a></p>
+    <script src="/js/matriculas/matriculas.js"></script>
+</body>
+</html>
